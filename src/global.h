@@ -184,4 +184,6 @@ roundup_64(unsigned long long x, unsigned int y)
 	return rounddown_64(x + y - 1, y);
 }
 
+#define BUILD_BUG_ON(condition) ((void)sizeof(char[1 - 2*!!(condition)]))
+
 #endif /* GLOBAL_H */
